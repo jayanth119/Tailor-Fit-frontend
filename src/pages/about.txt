@@ -10,4 +10,4 @@ src/
 
 - `LoginPage.js`: This file contains the component for the login page of the application. It includes the form and logic for user authentication.
 
-- `about.txt`: This file provides information about the `pages` folder and the page components contained within it. It serves as documentation for developers to understand the purpose and usage of the page components, making it easier to manage and maintain the application's views.
+- `about.txt`: This file provides information about the `pages` folder and the page components contained within it. It serves as documentation for developers to understand the purpose and usage of the page components, making it easier to manage and maintain the application's views.  
