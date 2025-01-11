@@ -1,0 +1,13 @@
+In a ReactJS project, the `src/hooks` folder is typically used to store custom hooks. Custom hooks are JavaScript functions that utilize React's hooks (like `useState`, `useEffect`, etc.) to encapsulate reusable logic. This helps in organizing the project structure by keeping all custom hooks in one place. Here is an example of a typical folder structure:
+
+src/
+├── hooks/
+│   ├── useAuth.js
+│   ├── useTheme.js
+│   └── about.txt
+
+- `useAuth.js`: This file contains a custom hook for managing authentication logic. It provides a reusable way to handle authentication state and actions across different components.
+
+- `useTheme.js`: This file contains a custom hook for managing theme logic. It allows components to easily access and modify the application's theme state.
+
+- `about.txt`: This file provides information about the `hooks` folder and the custom hooks contained within it. It serves as documentation for developers to understand the purpose and usage of the custom hooks, making it easier to manage and maintain reusable logic in the application.

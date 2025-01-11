@@ -1,0 +1,13 @@
+In a ReactJS project, the `src/contexts` folder is typically used to store context files that manage the global state of the application. This helps in organizing the project structure by keeping all context-related files in one place. Here is an example of a typical folder structure:
+
+src/
+├── contexts/
+│   ├── AuthContext.js
+│   ├── ThemeContext.js
+│   └── about.txt
+
+- `AuthContext.js`: This file is used to create and manage the authentication context for the application. It provides a way to share authentication state and logic across different components without passing props manually at every level.
+
+- `ThemeContext.js`: This file is used to create and manage the theme context for the application. It allows the application to switch between different themes (e.g., light and dark mode) and ensures that the theme state is accessible throughout the application.
+
+- `about.txt`: This file provides information about the `contexts` folder and the context files contained within it. It serves as documentation for developers to understand the purpose and usage of the context files, making it easier to manage and maintain the global state of the application.
