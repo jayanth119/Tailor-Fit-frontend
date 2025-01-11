@@ -49,7 +49,7 @@ Follow these steps to set up the frontend locally:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/tailorfit-frontend.git
+   git clone https://github.com/jayanth119/Tailor-Fit-frontend.git
    cd tailorfit-frontend
    npm install
    npm start
