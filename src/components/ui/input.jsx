@@ -6,7 +6,7 @@ const Input=forwardRef(({className,type,id,...props},ref)=>{
         id={id}
         ref={ref}
         type={type}
-        className={cn("w-full h-full bg-transparent border-none outline-none"
+        className={cn("bg-transparent border-none outline-none"
                         ,className)}
         {...props}/>
     );
