@@ -1,9 +1,5 @@
 import { useState,useEffect } from "react";
 import useInput from "../../hooks/useInput";
-import bgcenter from "../../assets/images/bgcenter.png";
-import MainLogo from "../../components/ui/mainlogo";
-import NavItems from "../../components/ui/navitems";
-import BgCenter from "../../components/ui/centrepic";
 import GlassContainer from "../../components/ui/glasscontainer";
 import FormInputComp from "../../components/ui/formInputComp";
 import Input from "../../components/ui/input";
@@ -11,6 +7,7 @@ import Button from "../../components/ui/button";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
+import AuthBackground from "../../components/ui/authbackgeound";
 import { DropDownHeader , DropDownMenu, DropDownItm} from "../../components/ui/dropdown";
 const SignUpPage=()=>{
     const [hovered,setHovered]=useState(null);
@@ -32,15 +29,7 @@ const SignUpPage=()=>{
         return()=>clearInterval(interval);
     },navItems);
     return(
-        <div className="flex flex-row w-full h-full relative gap-[35%]">
-            <div className="flex flex-col w-[30%] h-full p-5 justify-start items-center">
-                {/* Main Head */}
-                <MainLogo/>
-                {/* Navbar  */}
-                <NavItems navItems={navItems} hovered={hovered}/>
-                {/* centrePic  */}
-            <BgCenter bgcenter={bgcenter}/>
-            </div>
+        <AuthBackground>
             <GlassContainer className="absolute top-0 right-0 w-full sm:w-[350px] md:w-[400px] lg:w-[450px] h-full flex flex-col gap-4 px-9 py-6 rounded-l-[16px]">
                 <div className="w-full grow flex flex-col px-3 py-4">
                     <form onSubmit={(e)=>{e.preventDefault()}} className="w-full grow flex flex-col justify-between items-center">
@@ -106,7 +95,6 @@ const SignUpPage=()=>{
                             <Button type={"submit"} className="py-2 font-button2 rounded-[6px] text-base">
                                 Sign Up
                             </Button>
-                            
                         </div>
                         <div className="w-full h-auto flex flex-col justify-center items-center gap-6">
                             <div className="flex flex-row justify-center items-center w-[90%] pointer-events-none">
@@ -126,7 +114,7 @@ const SignUpPage=()=>{
                     </form>
                 </div>
             </GlassContainer>
-        </div>
+        </AuthBackground>
     )
 }
 export default SignUpPage;
