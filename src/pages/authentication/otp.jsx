@@ -5,6 +5,7 @@ import FormInputComp from "../../components/ui/formInputComp";
 import Input from "../../components/ui/input";
 import Button from "../../components/ui/button";
 import otpinputfocus from "../../utilities/otpinputfocus";
+import AuthBackground from "../../components/ui/authbackgeound";
 function OTPScreen(){
     const [otp,onChangeOtp]=useState("");
     useEffect(()=>{
@@ -17,7 +18,7 @@ function OTPScreen(){
         return;
     }
     return(
-        <div className="w-screen h-screen relative bg-[#0BAFB4]">
+        <AuthBackground>
             <GlassContainer className="absolute top-0 right-0 w-full sm:w-[350px] md:w-[400px] lg:w-[450px] h-full flex flex-col gap-9 p-9 rounded-l-[16px]">
                 <div className="w-full grow flex flex-col px-3 py-4">
                     <form onSubmit={handelsubmit} className="w-full grow flex flex-col justify-start items-center gap-9">
@@ -39,7 +40,7 @@ function OTPScreen(){
                     </form>
                 </div>
             </GlassContainer>
-        </div>
+        </AuthBackground>
     );
 }
 
