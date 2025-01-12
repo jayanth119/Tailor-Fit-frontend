@@ -1,10 +1,10 @@
 import { useState,useEffect } from "react";
-import bgcenter from '../assets/images/bgcenter.png'
-import MainLogo from "../components/ui/mainlogo";
-import NavItems from "../components/ui/navitems";
-import BgCenter from "../components/ui/centrepic";
-import Glass from "../components/ui/glass";
-const HomePage=()=>{
+import bgcenter from '../../assets/images/bgcenter.png';
+import MainLogo from "./mainlogo";
+import NavItems from "./navitems";
+import BgCenter from "./centrepic";
+
+const AuthBackground=({children})=>{
     const [hovered,setHovered]=useState(null);
     const navItems=['Trending','Customizing','Precision','Elegance'];
     useEffect(()=>{
@@ -23,8 +23,8 @@ const HomePage=()=>{
                 {/* centrePic  */}
             <BgCenter bgcenter={bgcenter}/>
             </div>
-        <Glass/>
+            {children}
         </div>
     )
 }
-export default HomePage;
+export default AuthBackground;

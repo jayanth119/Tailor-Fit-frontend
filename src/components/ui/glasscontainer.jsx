@@ -3,7 +3,7 @@ import { cn } from "../../utilities/cn";
 
 function GlassContainer({children,className}) {
     return (
-        <div className={cn("bg-[#0F9197]/[0.24]  backdrop-blur-[24px] drop-shadow-[0_4px_4px_2px_rgba(0,0,0,0.25)] absolute top-0 right-0 w-auto h-full flex flex-col gap-9 p-9",className)}>
+        <div className={cn("bg-[#0F9197]/[0.24]  backdrop-blur-[10px] drop-shadow-[0_4px_4px_2px_rgba(0,0,0,0.25)] absolute top-0 right-0 w-auto h-full flex flex-col gap-9 p-9",className)}>
             <div className="w-full h-[64px] flex flex-row justify-between items-center px-3 relative">
                 <div className="w-[36px] h-[36px] rounded-full bg-[#FFCCEE] relative flex flex-row justify-center items-center">
                      <svg  width="18" height="14" viewBox="0 0 29 19" fill="none" xmlns="http://www.w3.org/2000/svg">
