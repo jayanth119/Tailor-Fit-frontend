@@ -27,6 +27,7 @@ export default {
         subhead: "#430A3F",
         navitem: "#80292A",
         forgot: "#1854AD",
+        success: "#1B7D3F",
       },
       keyframes: {
         zoomIn: {
