@@ -3,14 +3,20 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backdropBlur: {
+        xs: "2px",
+        sm: "4px",
+        md: "8px",
+        lg: "12px",
+        xl: "16px",
+      },
       fontFamily: {
         main: ["Splash", "cursive"],
         subhead: ["Lato", "mono"],
         shop: ["Monomaniac One", "sans-serif"],
-        button: ["Jersey-15", "sans-serif"],
-        button2:["Montserrat", "serif"],
-        naItems: ["Poppins", "mono"],
-        Montserrat: ["Montserrat", "sans-serif"],
+        buttonf: ['"Jersey 25"', "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
         "radient-colour":
@@ -19,7 +25,8 @@ export default {
       colors: {
         button: "#6F276A",
         subhead: "#430A3F",
-        nav: "#80292A",
+        navitem: "#80292A",
+        forgot: "#1854AD",
       },
       keyframes: {
         zoomIn: {
