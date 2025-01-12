@@ -1,8 +1,8 @@
 import React from 'react';
-
-const Label = ({ htmlFor, children }) => {
+import { cn } from '../../utilities/cn';
+const Label = ({ htmlFor, children,className }) => {
     return (
-        <label htmlFor={htmlFor} className="block text-sm font-medium text-gray-700">
+        <label htmlFor={htmlFor} className={cn("block text-sm text-left font-medium text-gray-700", className)}>
             {children}
         </label>
     );

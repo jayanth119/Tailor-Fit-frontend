@@ -8,7 +8,9 @@ export default {
         subhead: ["Lato", "mono"],
         shop: ["Monomaniac One", "sans-serif"],
         button: ["Jersey-15", "sans-serif"],
+        button2:["Montserrat", "serif"],
         naItems: ["Poppins", "mono"],
+        Montserrat: ["Montserrat", "sans-serif"],
       },
       backgroundImage: {
         "radient-colour":
