@@ -1,9 +1,9 @@
 import './App.css';
-import LoginScreen from './pages/Login';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routes/MainRoute';
 function App() {
   return (
-    <LoginScreen/>
-  
+    <RouterProvider router={router} />
   )
 }
 
