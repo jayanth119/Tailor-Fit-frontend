@@ -7,7 +7,7 @@ export function PrivateRoute (){
         <>
             {/* state is use to pass the data  */}
             {
-                false?(<Outlet/>):<Navigate to={"/login"} state={{from : location}}/>
+                true?(<Outlet/>):<Navigate to={"/login"} state={{from : location}}/>
             }
         </>
     );
