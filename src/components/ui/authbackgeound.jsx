@@ -2,6 +2,7 @@ import { useState,useEffect } from "react";
 import bgcenter from '../../assets/images/bgcenter.png';
 import MainLogo from "./mainlogo";
 import NavItems from "./navitems";
+import Shop from "./Shop";
 import BgCenter from "./centrepic";
 
 const AuthBackground=({children})=>{
@@ -20,9 +21,11 @@ const AuthBackground=({children})=>{
                     {/* Main Head */}
                     <MainLogo/>
                     {/* Navbar  */}
-                    <NavItems navItems={navItems} hovered={hovered}/>
+                    {/* <NavItems navItems={navItems} hovered={hovered}/> */}
+                    {/* Shop */}
+                    <Shop navItems={navItems}/>
                     {/* centrePic  */}
-                <BgCenter bgcenter={bgcenter}/>
+                    <BgCenter bgcenter={bgcenter}/>
                 </div>
                 {children}
             </div>
