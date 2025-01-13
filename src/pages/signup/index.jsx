@@ -30,14 +30,14 @@ const SignUpPage=()=>{
     },navItems);
     return(
         <AuthBackground>
-            <GlassContainer className="absolute top-0 right-0 w-full sm:w-[350px] md:w-[400px] lg:w-[450px] h-full flex flex-col gap-4 px-9 py-6 rounded-l-[16px]">
+            <GlassContainer className="absolute top-0 right-0 w-full sm:w-[350px] md:w-[400px] lg:w-[450px] h-full flex flex-col gap-2 px-9 py-6 rounded-l-[16px]">
                 <div className="w-full grow flex flex-col px-3 py-4">
                     <form onSubmit={(e)=>{e.preventDefault()}} className="w-full grow flex flex-col justify-between items-center">
                         <div className="w-full h-auto flex flex-col justify-start items-start gap-2">
                             <p className="font-Montserrat sm:text-xl md:text-2xl lg:text-3xl text-left font-semibold text-white"><span className="text-[#EF4444]">Forgot</span> Password</p>
                             <p className="font-Montserrat sm:text-sm  md:text-base text-left sm:font-light md:font-normal text-white text-wrap">No worries, We'll send you reset instructions.</p>
                         </div>
-                        <div className="w-full h-auto flex flex-col gap-9">
+                        <div className="w-full h-auto flex flex-col gap-8">
                             <div className="w-full h-auto flex flex-col justify-start items-center gap-6">
                                 <FormInputComp>
                                     <div className={`w-auto h-auto group flex flex-row justify-start items-center gap-2 border-dashed border-b-2 border-[#D9D9D9]/[0.6] has-[:focus]:border-white ${username!==""?"border-white":""} py-2 px-2`}>
@@ -66,10 +66,10 @@ const SignUpPage=()=>{
                                     </div>
                                     {/* <p className={`w-full h-5 font-subhead text-sm font-medium text-[#EF4444] text-left ${errorPwd!==""?"visible":"invisible"}`}>{errorPwd}</p> */}
                                 </FormInputComp>
-                                <div className="w-full h-auto p-1 flex flex-row justify-start items-center">
-                                    <p className="w-auto h-full pr-4 py-2 text-left font-mono font-medium text-slate-100">Select Your Role :</p>
-                                    <DropDownHeader onClick={()=>{setDropdown(!dropdown)}} value={dropdownval} className={"grow"}>
-                                        <DropDownMenu className={`${dropdown?"block":"hidden"}`}>
+                                <div className="w-full h-auto p-1 flex flex-row justify-start items-center font-subhead ">
+                                    <p className="w-auto h-full pr-4 py-2 text-left font-subhead font-medium text-lg text-slate-100">Select Your Role :</p>
+                                    <DropDownHeader onClick={()=>{setDropdown(!dropdown)}} value={dropdownval} className={'grow'}>
+                                        <DropDownMenu  className={`absolute top-10 left-0 transition-all duration-300 ease-in-out ${dropdown ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}>
                                             <DropDownItm onClick={
                                                 ()=>{
                                                     setDropdownVal("Customer");
@@ -96,7 +96,7 @@ const SignUpPage=()=>{
                                 Sign Up
                             </Button>
                         </div>
-                        <div className="w-full h-auto flex flex-col justify-center items-center gap-6">
+                        <div className="w-full h-auto flex flex-col justify-center items-center gap-3">
                             <div className="flex flex-row justify-center items-center w-[90%] pointer-events-none">
                                 <div className="border-t border-white flex-grow"></div>
                                 <span className="mx-4 text-white">OR</span>
