@@ -24,7 +24,7 @@ const Shop=({navItems})=>{
                 textElement,
                 {
                   fontSize: "18px",
-                  fontWeight: "600",
+                  fontWeight: "500",
                   color: "white",
                   duration: 0.9,
                   ease: "power2.inOut",

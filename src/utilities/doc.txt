@@ -1,0 +1,7 @@
+Advanced 3D design tools like Maya, Zbrush, Blender, and 3ds Max are powerful professional tools.
+
+Google’s Poly can be a good starting resource for building your first ARCore experience.
+
+Poly by Google is a repository of 3D assets that can be quickly downloaded and used in your ARCore experience.
+
+The recommended guide for your AR experience is a design document that contains all of the 3D assets, sounds, and other design ideas for your team to implement.
