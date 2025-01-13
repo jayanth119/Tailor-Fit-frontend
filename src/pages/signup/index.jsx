@@ -31,6 +31,15 @@ const SignUpPage=()=>{
     return(
         <AuthBackground>
             <GlassContainer className="absolute top-0 right-0 w-full sm:w-[350px] md:w-[400px] lg:w-[450px] h-full flex flex-col gap-4 px-9 py-9 rounded-l-[16px]">
+                <div className="w-full h-auto flex flex-row justify-end items-center px-3 relative">
+                    <div className="w-[36px] h-36px] flex flex-row justify-center items-center">
+                        <svg className="stroke-[#D9D9D9]/70 hover:stroke-white/100 hover:cursor-pointer" width="36" height="36" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 36.808L35.7357 16"  stroke-opacity="1" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M17 16L35.7357 36.8081"  stroke-opacity="1" stroke-width="3" stroke-linecap="round"/>
+                            <rect x="1.5" y="1.5" width="49" height="49" rx="14.5"  stroke-opacity="1" stroke-width="3"/>
+                        </svg>
+                    </div>
+                </div>
                 <div className="w-full grow flex flex-col px-3 py-4">
                     <form onSubmit={(e)=>{e.preventDefault()}} className="w-full grow flex flex-col justify-start items-center gap-10">
                         <div className="w-full h-auto flex flex-col justify-start items-start gap-2">
