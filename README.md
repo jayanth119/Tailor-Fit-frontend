@@ -83,7 +83,7 @@ We welcome contributions from developers who are passionate about improving the 
 - **Surya Vamsi Doddi**  
 
     Special acknowledgment to the entire TailorFit team for their dedication to this transformative project and for their efforts in modernizing the tailoring and e-commerce experience.
-
+by suryA
 ## License
     This project is not currently licensed.  
 
