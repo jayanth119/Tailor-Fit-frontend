@@ -17,7 +17,7 @@ const Shop=({navItems})=>{
             timeline
               .to(line, {
                 width: 16,
-                duration: 0.9,
+                duration: 0.7,
                 ease: "power2.inOut",
               },index * 1.3 )
               .to(
@@ -26,12 +26,12 @@ const Shop=({navItems})=>{
                   fontSize: "18px",
                   fontWeight: "500",
                   color: "white",
-                  duration: 0.9,
+                  duration: 0.7,
                   ease: "power2.inOut",
                 },`<`)
                 .to(line, {
                     width: 0,
-                    duration: 0.9,
+                    duration: 0.7,
                     delay: 0.4,
                     ease: "power2.inOut",
                   },)
@@ -41,7 +41,7 @@ const Shop=({navItems})=>{
                       fontSize: "14px",
                       fontWeight: "500",
                       color: "#ffffff8c",
-                      duration: 0.9,
+                      duration: 0.7,
                       ease: "power2.inOut",
                     },"<")
             });
