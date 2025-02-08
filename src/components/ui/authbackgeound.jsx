@@ -15,16 +15,11 @@ const AuthBackground=({children})=>{
         return()=>clearInterval(interval);
     },navItems);
     return(
-        <div className='bg-radient-colour w-screen h-screen'>
-            <div className="flex flex-row w-full h-full relative gap-[35%]">
-                <div className="flex flex-col w-[30%] h-full p-5 justify-start items-center">
-                    {/* Main Head */}
+        <div className='bg-radient-colour w-full h-screen'>{/*hidden md:block*/}
+            <div className="flex flex-col md:flex-row w-full h-full relative md:gap-[37.5%]">
+                <div className="hidden md:flex flex-col w-[30%] h-full p-5 justify-start items-center">
                     <MainLogo/>
-                    {/* Navbar  */}
-                    {/* <NavItems navItems={navItems} hovered={hovered}/> */}
-                    {/* Shop */}
                     <Shop navItems={navItems}/>
-                    {/* centrePic  */}
                     <BgCenter bgcenter={bgcenter}/>
                 </div>
                 {children}

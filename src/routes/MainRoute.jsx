@@ -46,7 +46,7 @@ export const router = createBrowserRouter([
         errorElement:<ErrorPage/>
     },
     {
-        element: <PrivateRoute/>,//wraps the routes below and protect them
+        element: <PrivateRoute/>,
         children : [
             {
                 path: "/",

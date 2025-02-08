@@ -21,9 +21,9 @@ const StartPage=()=>{
                 {/* Navbar  */}
                 <NavItems navItems={navItems} hovered={hovered}/>
                 {/* centrePic  */}
-            <BgCenter bgcenter={bgcenter}/>
+                <BgCenter bgcenter={bgcenter}/>
             </div>
-        <Glass/>
+            <Glass/>
         </div>
     )
 }
