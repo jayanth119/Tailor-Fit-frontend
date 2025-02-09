@@ -7,30 +7,26 @@ import Button from "../../components/ui/button";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
+import { IoEye } from "react-icons/io5";
+import { IoEyeOff } from "react-icons/io5";
 import AuthBackground from "../../components/ui/authbackgeound";
-import { DropDownHeader , DropDownMenu, DropDownItm} from "../../components/ui/dropdown";
 import useNavigator from "../../hooks/useNavigator";
 import RouterConfig from "../../config/routerconfig";
+import { useTogglePswd } from "../../hooks/useTogglePswd";
 const SignUpPage=()=>{
-    const [hovered,setHovered]=useState(null);
-    const [dropdown,setDropdown] = useState(false);
-    const [dropdownval ,setDropdownVal] = useState("Customer")
-    const navItems=['Trending','Customizing','Precision','Elegance'];
     const [email,onChangeEmail]=useInput("");
     const [errorEmail,setErrorEmail]= useState("");
-    const [username,onChangeUsername]=useInput("");
-    const [errorUsername,setErrorUsername]= useState("");
     const [pwd,onChangePwd]=useInput("");
+    const [cnfpwd,onChangeCnfPwd]=useInput("");
     const [errorPwd,setErrorPwd]= useState("");
-    const [role,setRole]=useState("");
     const [loaction,navigator] = useNavigator();
+    const [getTypeOfPassword,setTypeOfPassword] = useTogglePswd();
     
-    useEffect(()=>{
-        const interval=setInterval(()=>{
-            setHovered((prev)=>(prev+1)%navItems.length);
-        },1500);
-        return()=>clearInterval(interval);
-    },navItems);
+    const handelSubmit = (e)=>{
+        e.preventDefault();
+        navigator(RouterConfig.auth.otp);
+    }
+    
     return(
         <AuthBackground>
             <GlassContainer className="absolute top-0 right-0 w-full sm:w-[350px] md:w-[400px] lg:w-[450px] h-full flex flex-col gap-2 rounded-l-[16px] px-4 py-9 md:p-9">
@@ -48,7 +44,7 @@ const SignUpPage=()=>{
                         <p className="font-Montserrat text-4xl sm:text-xl md:text-2xl lg:text-4xl text-left font-semibold text-white"><span className="text-[#430A3F]">New</span> Member</p>
                         <p className="font-Montserrat text-2xl sm:text-sm  md:text-base lg:text-xl text-left sm:font-light md:font-normal text-white text-wrap">Welcome to TailorFit!</p>
                     </div>
-                    <form onSubmit={(e)=>{e.preventDefault()}} className="w-full  h-auto flex flex-col justify-center items-center py-4">
+                    <form onSubmit={handelSubmit} className="w-full  h-auto flex flex-col justify-center items-center py-4">
                         <div className="w-full h-auto flex flex-col justify-center items-center gap-12">
                             <div className="w-full h-auto flex flex-col justify-start items-center gap-8">
                                 <FormInputComp>
@@ -61,10 +57,24 @@ const SignUpPage=()=>{
                                 </FormInputComp>
                                 <FormInputComp>
                                     <div className={`w-auto h-auto group flex flex-row justify-start items-center gap-2 border-dashed border-b-2 border-[#D9D9D9]/[0.6] has-[:focus]:border-white ${pwd!==""?"border-white":""} py-2 px-2`}>
-                                        <Input value={pwd} onChange={onChangePwd} type="password" id="password" className="peer order-2 w-full h-full border-none font-subhead text-base text-white placeholder:font-subhead placeholder:text-base placeholder:text-[#D9D9D9]/[0.6]" placeholder="Enter Password"/>
+                                        <Input value={pwd} onChange={onChangePwd} type={getTypeOfPassword("pswd")} id="password" className="peer order-2 w-full h-full border-none font-subhead text-xl text-white placeholder:font-subhead placeholder:text-base placeholder:text-[#D9D9D9]/[0.6]" placeholder="Enter Password"/>
                                         <svg className={`stroke-2  order-1 peer-focus:stroke-white ${pwd!==""?"stroke-white/100":"stroke-white/60"}`} width="24" height="24" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.5 15.5V9.5C8.5 7.51088 9.29018 5.60322 10.6967 4.1967C12.1032 2.79018 14.0109 2 16 2C17.9891 2 19.8968 2.79018 21.3033 4.1967C22.7098 5.60322 23.5 7.51088 23.5 9.5V15.5M5.5 15.5H26.5C28.1569 15.5 29.5 16.8431 29.5 18.5V29C29.5 30.6569 28.1569 32 26.5 32H5.5C3.84315 32 2.5 30.6569 2.5 29V18.5C2.5 16.8431 3.84315 15.5 5.5 15.5Z" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                                            <path d="M8.5 15.5V9.5C8.5 7.51088 9.29018 5.60322 10.6967 4.1967C12.1032 2.79018 14.0109 2 16 2C17.9891 2 19.8968 2.79018 21.3033 4.1967C22.7098 5.60322 23.5 7.51088 23.5 9.5V15.5M5.5 15.5H26.5C28.1569 15.5 29.5 16.8431 29.5 18.5V29C29.5 30.6569 28.1569 32 26.5 32H5.5C3.84315 32 2.5 30.6569 2.5 29V18.5C2.5 16.8431 3.84315 15.5 5.5 15.5Z" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
+                                        <div onClick={()=>{setTypeOfPassword("pswd")}} className={`order-3 w-6 h-6 flex flex-row justify-center items-center p-[2px] ${pwd===""?"invisible":"visible"} `}>
+                                            {getTypeOfPassword("pswd")==="password"?<IoEye className="text-white" size={20}/>:<IoEyeOff className="text-white" size={20}/>}
+                                        </div>
+                                    </div>
+                                </FormInputComp>
+                                <FormInputComp>
+                                    <div className={`w-auto h-auto group flex flex-row justify-start items-center gap-2 border-dashed border-b-2 border-[#D9D9D9]/[0.6] has-[:focus]:border-white ${cnfpwd!==""?"border-white":""} py-2 px-2`}>
+                                        <Input value={cnfpwd} onChange={onChangeCnfPwd} type={getTypeOfPassword("cnfpswd")} id="cnfpassword" className="peer order-2 w-full h-full border-none font-subhead text-xl text-white placeholder:font-subhead placeholder:text-base placeholder:text-[#D9D9D9]/[0.6]" placeholder="Enter Password"/>
+                                        <svg className={`stroke-2  order-1 peer-focus:stroke-white ${cnfpwd!==""?"stroke-white/100":"stroke-white/60"}`} width="24" height="24" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.5 15.5V9.5C8.5 7.51088 9.29018 5.60322 10.6967 4.1967C12.1032 2.79018 14.0109 2 16 2C17.9891 2 19.8968 2.79018 21.3033 4.1967C22.7098 5.60322 23.5 7.51088 23.5 9.5V15.5M5.5 15.5H26.5C28.1569 15.5 29.5 16.8431 29.5 18.5V29C29.5 30.6569 28.1569 32 26.5 32H5.5C3.84315 32 2.5 30.6569 2.5 29V18.5C2.5 16.8431 3.84315 15.5 5.5 15.5Z" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                        <div onClick={()=>{setTypeOfPassword("cnfpswd")}} className={`order-3 w-6 h-6 flex flex-row justify-center items-center p-[2px] ${cnfpwd===""?"invisible":"visible"}`}>
+                                            {getTypeOfPassword("cnfpswd")==="password"?<IoEye className="text-white" size={20}/>:<IoEyeOff className="text-white" size={20}/>}
+                                        </div>
                                     </div>
                                 </FormInputComp>
                             </div>

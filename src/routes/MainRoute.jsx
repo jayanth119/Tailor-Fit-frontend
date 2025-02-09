@@ -22,21 +22,21 @@ export const router = createBrowserRouter([
     },
     {
         path:"/forgot-password",
-        element:<SetPasswordScreen/>,
-        errorElement:<ErrorPage/>
-    },
-    {
-        path:"/set-password",
         element:<ForgotPasswordScreen/>,
         errorElement:<ErrorPage/>
     },
     {
-        path:"/otp-password",
+        path:"/set-password",
+        element:<SetPasswordScreen/>,
+        errorElement:<ErrorPage/>
+    },
+    {
+        path:"/otp",
         element:<OTPScreen/>,
         errorElement:<ErrorPage/>
     },
     {
-        path:"/success-password",
+        path:"/success",
         element:<SuccessScreenPass/>,
         errorElement:<ErrorPage/>
     },

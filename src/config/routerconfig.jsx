@@ -4,8 +4,8 @@ const RouterConfig = {
         signup:"/signup",
         forgotpassword:"/forgot-password",
         setpassword:"/set-password",
-        otppassword:"/otp-password",
-        successpassword:"/success-password",
+        otp:"/otp",
+        success:"/success",
         profile:"profile",
     },
     pages:{

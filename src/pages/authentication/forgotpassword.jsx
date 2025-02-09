@@ -8,35 +8,27 @@ import { validateEmail } from "../../utilities/formValidation";
 import AuthBackground from "../../components/ui/authbackgeound";
 import useNavigator from "../../hooks/useNavigator";
 import RouterConfig from "../../config/routerconfig";
+
 function ForgotPasswordScreen(){
-    const [loaction,navigator] = useNavigator();
-    const [hovered,setHovered]=useState(null);
-    const navItems=['Trending','Customizing','Precision','Elegance'];
+    const [loaction,navigator,backNavigation] = useNavigator();
     const [email,onChangeEmail]=useInput("");
     const [errorEmail,setErrorEmail]= useState("");
-
-    useEffect(()=>{
-        const interval=setInterval(()=>{
-            setHovered((prev)=>(prev+1)%navItems.length);
-        },1500);
-        return()=>clearInterval(interval);
-    },navItems);
-
     const handelSubmit = (e)=> {
         e.preventDefault();
-        const Error = validateEmail(email);
-        if(Error !== ""){
-            setErrorEmail(Error);
-            return ;
-        }
-        setErrorEmail("");
+        // const Error = validateEmail(email);
+        // if(Error !== ""){
+        //     setErrorEmail(Error);
+        //     return ;
+        // }
+        // setErrorEmail("");
+        navigator(RouterConfig.auth.otp);
         return;
     }
     return(
         <AuthBackground>
             <GlassContainer className="absolute top-0 right-0 w-full sm:w-[350px] md:w-[400px] lg:w-[450px] h-full flex flex-col gap-9 px-6 py-12 md:p-9 rounded-l-[16px]">
                 <div className="w-full h-auto flex flex-row justify-between items-center px-3 relative">
-                    <div onClick={()=>{navigator(loaction.state.from)}} className="w-[36px] h-[36px] rounded-full bg-[#FFCCEE] relative flex flex-row justify-center items-center">
+                    <div onClick={()=>{backNavigation()}} className="w-[36px] h-[36px] rounded-full bg-[#FFCCEE] relative flex flex-row justify-center items-center hover:cursor-pointer">
                         <svg  width="18" height="14" viewBox="0 0 29 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="Group 4">
                             <path id="Vector 5" d="M2.07104 9.07104L26.071 9.07104" stroke="#6F276A" stroke-width="4" stroke-linecap="round"/>

@@ -20,7 +20,7 @@ const AuthBackground=({children})=>{
                 <div className="hidden md:flex flex-col w-[30%] h-full p-5 justify-start items-center">
                     <MainLogo/>
                     <Shop navItems={navItems}/>
-                    <BgCenter bgcenter={bgcenter}/>
+                    {/* <BgCenter bgcenter={bgcenter}/> */}
                 </div>
                 {children}
             </div>
