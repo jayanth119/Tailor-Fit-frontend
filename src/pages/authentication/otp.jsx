@@ -55,6 +55,7 @@ function OTPScreen(){
                             <p className="font-Montserrat text-4xl sm:text-xl md:text-2xl lg:text-3xl text-left font-semibold text-white">Enter  <span className="text-[#A42D41]">O</span><span className="text-[#92992D]">T</span><span className="text-[#029217]">P</span></p>
                             <p className="font-Montserrat text-2xl sm:text-sm  md:text-base text-left sm:font-light md:font-normal text-white text-wrap">Please Enter 4 Digits Otp </p>
                         </div>
+                        
                         <div className="w-full h-auto flex flex-col gap-12">
                             <div className="w-full h-auto flex flex-row justify-center items-center gap-6">
                                 <input type="number" className="otp-input w-12 h-12 text-center text-base font-subhead font-semibold text-white  border-2 rounded-xl border-[#7E33E0]/60 bg-[#F5E1FC]/30 focus:border-[#7E33E0]/100 focus:border-3 disabled:bg-[#F5E1FC]/40 outline-none"/>
