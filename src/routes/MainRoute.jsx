@@ -9,6 +9,7 @@ import OTPScreen from "../pages/authentication/otp";
 import SuccessScreenPass from "../pages/authentication/success-screen-password";
 import Home from "../pages/home";
 import { PrivateRoute } from "../components/privateroutes";
+import LandingPage from "../pages/landing";
 export const router = createBrowserRouter([
     {
         path:"/login",
@@ -46,14 +47,19 @@ export const router = createBrowserRouter([
         errorElement:<ErrorPage/>
     },
     {
-        element: <PrivateRoute/>,
-        children : [
-            {
-                path: "/",
-                element:<Home/>,
-                errorElement:<Error/>
-            },
-        ],
+        path:"/",
+        element:<LandingPage/>,
+        errorElement:<ErrorPage/>
     },
+    // {
+    //     element: <PrivateRoute/>,
+    //     children : [
+    //         {
+    //             path: "/",
+    //             element:<Home/>,
+    //             errorElement:<Error/>
+    //         },
+    //     ],
+    // },
     
 ])
