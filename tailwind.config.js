@@ -27,6 +27,7 @@ export default {
         "circular-slider" : "radial-gradient(circle at center bottom, #0B024D, #C2C1C5)"
       },
       colors: {
+        homebasic:"#183F3D",
         button: "#6F276A",
         subhead: "#430A3F",
         navitem: "#80292A",
