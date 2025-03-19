@@ -11,18 +11,20 @@ export default {
         xl: "16px",
       },
       fontFamily: {
-        main: ["Splash", "cursive"],
+        main: ["Alex Brush","cursive"],
         subhead: ["Lato", "mono"],
         shop: ["Monomaniac One", "sans-serif"],
         buttonf: ['"Jersey 25"', "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        
       },
       backgroundImage: {
         "radient-colour":
           "radial-gradient(circle, #92E0E4 0%, #63D7DB 50%, #0A999D 100%)",
       },
       colors: {
+        homebasic:"#183F3D",
         button: "#6F276A",
         subhead: "#430A3F",
         navitem: "#80292A",
