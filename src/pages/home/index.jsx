@@ -1,20 +1,12 @@
-import {React,useState} from 'react';
+import {React} from 'react';
 import MainLayout from '../../components/layout/mainlayout';
-import HomeSlider from '../../components/ui/homeslide';
-import Suggestion from './suggesitions';
+import Suggestions from '../../components/home/suggesitions';
 
 const Home = () => {
-    
-    
     return (
         <MainLayout>
             <div className='w-full grow flex flex-col justify-start items-center pb-4'>
-                <HomeSlider />
-                <div className='w-full h-auto flex flex-col justify-start items-center py-4 gap-6'>
-                    <Suggestion/>
-
-                </div>
-                
+                <Suggestions/>
             </div>
         </MainLayout>
     );

@@ -11,6 +11,8 @@ export default {
         xl: "16px",
       },
       fontFamily: {
+        caliber: ['Caliber', 'sans-serif'],
+        ZapfHumanist: ['ZapfHumanist', 'sans-serif'],
         main: ["Splash", "cursive"],
         subhead: ["Lato", "mono"],
         shop: ["Monomaniac One", "sans-serif"],

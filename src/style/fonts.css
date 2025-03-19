@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Caliber'; /* Your Font Name */
+    src: url('../assets/fonts/Calibre-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+  font-family: 'ZapfHumanist'; /* Your Font Name */
+  src: url('../assets/fonts/ZapfHumanist.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

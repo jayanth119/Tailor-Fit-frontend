@@ -1,6 +1,6 @@
 import {React,useState,useEffect} from "react";
 import { FaAngleRight,FaAngleLeft } from "react-icons/fa6";
-import { Swiper, SwiperSlide,useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import "../../style/slider.css";
 import 'swiper/css/pagination';
