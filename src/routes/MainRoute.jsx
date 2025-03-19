@@ -47,19 +47,14 @@ export const router = createBrowserRouter([
         errorElement:<ErrorPage/>
     },
     {
-        path:"/",
-        element:<LandingPage/>,
-        errorElement:<ErrorPage/>
+        element: <PrivateRoute/>,
+        children : [
+            {
+                path: "/",
+                element:<Home/>,
+                errorElement:<ErrorPage/>
+            },
+        ],
     },
-    // {
-    //     element: <PrivateRoute/>,
-    //     children : [
-    //         {
-    //             path: "/",
-    //             element:<Home/>,
-    //             errorElement:<Error/>
-    //         },
-    //     ],
-    // },
     
 ])

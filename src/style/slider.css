@@ -1,0 +1,10 @@
+
+.outOfViewPort{
+    width: 0px;
+}
+.prevCard{
+    width:20%;
+}
+.currentCard{
+    width: calc(60% - 32px);
+}

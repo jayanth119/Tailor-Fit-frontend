@@ -17,10 +17,12 @@ export default {
         buttonf: ['"Jersey 25"', "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        urbanist: ["Urbanist","sans-serif"],
       },
       backgroundImage: {
-        "radient-colour":
-          "radial-gradient(circle, #92E0E4 0%, #63D7DB 50%, #0A999D 100%)",
+        "radient-colour":"radial-gradient(circle, #92E0E4 0%, #63D7DB 50%, #0A999D 100%)",
+        "circular-color": "radial-gradient(circle 360px at center bottom, #FAEDFC, #F4F4F6)",
+        "circular-slider" : "radial-gradient(circle at center bottom, #0B024D, #C2C1C5)"
       },
       colors: {
         button: "#6F276A",
