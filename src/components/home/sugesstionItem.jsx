@@ -37,7 +37,7 @@ const SuggestionItem = () => {
 export const SuggestionSlider  = ()=>{
     return(
         <Swiper
-        slidesPerView = {1}
+        slidesPerView={1}
         loop = {true}
         speed={600}
         navigation={true}

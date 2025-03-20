@@ -35,8 +35,13 @@ function HomeSlider(){
         
     }
     return(
-        <div className="w-full h-auto flex flex-col justify-center items-center ">
-            <div className="relative w-full h-[440px] md:h-[212px] lg:h-[512px] pt-2 mb-6 md:mb-6 flex flex-row justify-center items-center">
+        <div className="w-full h-auto flex flex-col justify-center items-center gap-4 px-14 ">
+            <div className="w-full h-auto flex flex-row justify-center items-center gap-4">
+                <h1 className="grow h-auto text-start font-ZapfHumanist font-medium text-5xl ">
+                    Top Tailors
+                </h1>
+            </div>
+            <div className="jio-slider relative w-full h-[440px] md:h-[212px] lg:h-[512px] pt-2 mb-6 md:mb-6 flex flex-row justify-center items-center">
                 
                 <Swiper className="w-full h-full flex flex-row justify-center items-center"
                     slidesPerView={3}
@@ -78,14 +83,14 @@ function HomeSlider(){
                         })
                     }
                 </Swiper>
-                <div className="icon-container right-36 ">
+                {/* <div className="icon-container right-36 ">
                     <div onMouseDown={(e)=>{setMouseClicklft(true)}} onMouseUp={(e)=>{setMouseClicklft(false)}} className={`swiper-button-next relative rounded-full border-solid border-[3px] border-[#46454C] bg-transparent hidden md:flex flex-col justify-center items-center hover:cursor-pointer transition-transform duration-[175ms] m-0 ${mouseClicklft?"scale-[0.8725]":"scale-100"}`}>
                         <FaAngleLeft className="icon-size text-[#46454C]"/>
                     </div>
                     <div onMouseDown={(e)=>{setMouseClickrgt(true)}} onMouseUp={(e)=>{setMouseClickrgt(false)}} className={`swiper-button-prev relative rounded-full border-solid border-[3px] border-[#46454C] bg-transparent hidden md:flex flex-col justify-center items-center hover:cursor-pointer transition-transform duration-[175ms] ${mouseClickrgt?"scale-[0.8725]":"scale-100"}`}>
                         <FaAngleRight className="icon-size text-[#46454C]"/>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );
