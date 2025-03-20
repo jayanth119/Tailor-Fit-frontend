@@ -1,0 +1,22 @@
+
+
+/* slider sliding */
+
+.suggestion-slider-container .swiper{
+    width: 100% !important;
+    height: 100% !important;
+}
+.suggestion-slider-container .swiper .swiper-wrapper{
+    width: auto !important;
+    height: 100% !important;
+}
+.suggestion-slider-container .swiper .swiper-button-prev::after,.suggestion-slider-container .swiper .swiper-button-next::after{
+    width: 24px !important;
+    height: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 18px !important; 
+    color: #6a6a6a !important;
+}

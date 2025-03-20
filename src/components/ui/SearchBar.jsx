@@ -2,7 +2,7 @@ import { useState } from "react";
 const SearchBar=()=>{
     const [search,setSearch]=useState('');
     return(
-        <div>
+        <div className="w-full h-auto flex flex-row justify-end items-center">
             <input 
             type="text" 
             placeholder="Search...." 
