@@ -15,7 +15,7 @@ const SuggestionItem = () => {
     return (
         <div className="group w-full h-auto flex flex-col justify-center items-center gap-[6px] hover:cursor-pointer">
             <div className="suggestion relative w-full aspect-[329/464] bg-[#F3F1EF]">
-                <Star className="z-50 absolute top-4 right-4 w-4 h-4 text-[#757575]" />
+                <Star className="z-10 absolute top-4 right-4 w-4 h-4 text-[#757575]" />
                 <div className="w-full h-full flex flex-col justify-center items-center">
                     <img src={suggestion_3} alt="slider-image" className="w-full h-full aspect-[329/464] object-cover"/>
                 </div>

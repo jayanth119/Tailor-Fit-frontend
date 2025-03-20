@@ -1,19 +1,41 @@
-import SearchBar from '../ui/SearchBar';
-const NavBar=()=>{
-    return(
-        <div className="flex flex-row w-screen justify-evenly items-center h-auto bg-sky-100 shadow-md fixed top-0 left-0 z-50 px-20 py-2">
-            <div className='grow h-full flex flex-row justify-start items-center gap-6'>
-                <button className="w-auto h-full font-caliber font-bold text-xl flex flex-col items-center justify-center">Home</button>
-                <button className="w-auto h-full font-caliber font-bold text-xl flex flex-col items-center justify-center">Try On</button>
-            </div>
-            <a href="www.google.com" className="font-main text-5xl/[48px] text-green-950 ">Tailor-Fit</a>
-            <div className='grow h-full flex flex-row justify-end items-center gap-6'>
-                <SearchBar/>            
-                <button className="w-auto h-full font-caliber font-bold text-xl flex items-center justify-center">Cart</button>
-                <button className="w-auto h-full font-caliber font-bold text-xl flex items-center justify-center">Login</button>
-            </div>
-        </div>        
-    )
-}
+import { useEffect, useState } from "react";
+import SearchBar from "../ui/SearchBar";
+
+const NavBar = () => {
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div
+      className={`flex flex-row w-screen justify-between items-center h-auto fixed top-0 left-0 z-50 px-16 py-2 transition-colors duration-300 
+        ${scroll ? "bg-white text-black shadow-md" : "bg-transparent text-white"}
+        hover:bg-white hover:text-black hover:cursor-pointer`}
+    >
+      <div className="w-full h-auto grid grid-cols-3 justify-between items-center">
+        <div className="col-span-1 h-auto flex flex-row justify-start items-center gap-8">
+          <a href="#" className="text-base text-inherit font-normal">Home</a>
+          <a href="#" className="text-base text-inherit font-normal">Try-On</a>
+          <a href="#" className="text-base text-inherit font-normal">Trending</a>
+        </div>
+        <h1 className="col-span-1 h-auto flex flex-col justify-center items-center text-5xl text-center text-inherit font-semibold font-main">
+          <span className="relative top-1">Tailor Fit</span>
+        </h1>
+        <div className="col-span-1 h-auto flex flex-row justify-end items-center gap-8">
+          <SearchBar scroll={scroll} />
+          <a href="#" className="text-base text-inherit font-normal">Cart</a>
+          <a href="#" className="text-base text-inherit font-normal">Login</a>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default NavBar;

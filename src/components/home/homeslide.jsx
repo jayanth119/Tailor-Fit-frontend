@@ -1,5 +1,4 @@
-import {React,useState,useEffect} from "react";
-import { FaAngleRight,FaAngleLeft } from "react-icons/fa6";
+import {React,useState} from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import "../../style/slider.css";
@@ -7,14 +6,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import useNavigator from "../../hooks/useNavigator";
 import { Autoplay, Navigation } from 'swiper/modules';
+import { ArrowUpRight, Star } from "lucide-react";
 
 
 function HomeSlider(){
     const [swiperEle,setSwiperEle] = useState(null);
     const [activeIndex, setActiveIndex] = useState(0);
-    const [loaction,navigator] = useNavigator();
-    const [mouseClickrgt,setMouseClickrgt] = useState(false);
-    const [mouseClicklft,setMouseClicklft] = useState(false);
+    const [,navigator] = useNavigator();
     const data = [
         "https://v3img.voot.com/resizeMedium,w_914,h_514/v3Storage/assets/vertical-tvdi-1729190726033.jpg",
         "https://v3img.voot.com/resizeMedium,w_914,h_514/v3Storage/assets/vertical-carousel-tv-1738045273909.jpg",
@@ -53,12 +51,7 @@ function HomeSlider(){
                     disableOnInteraction: false,
                     }}
                     onInit={(swiper) =>  setSwiperEle(swiper)}
-                    navigation={
-                        {
-                            prevEl:".swiper-button-next",
-                            nextEl:".swiper-button-prev"
-                        }
-                    }
+                    navigation={false}
                     onSlideChange={(swiper) => {setActiveIndex(swiper.realIndex)}} 
                     breakpoints={{
                         320:{
@@ -74,10 +67,29 @@ function HomeSlider(){
                         data.map((data,index)=>{
                             return (
                                 <SwiperSlide key={index} onClick={(e)=>{handelSlideClick(event,index)}} className="relative aspect-video h-full rounded-2xl overflow-hidden bg-[#0B024D] bg-right transition-all duration-[400ms] ">
-                                    <img loading="lazy" src={data} className={`absolute w-full h-full aspect-video object-cover transition-opacity duration-[600ms] ${activeIndex===index?"opacity-100":"opacity-65"}`}/>
-                                    <div className={`absolute bottom-0 w-full h-3/4 flex flex-col justify-end items-center px-4 py-8 md:py-2 lg:px-6 lg:pb-8 bg-gradient-to-b from-transparent from-10% to-black to-85%  transition-opacity duration-[600ms] ${index === activeIndex?"opacity-100":"opacity-0"}`}>
-                                        <h1 className={`font-urbanist font-semibold text-balance md:text-5xl text-center text-white`}>Heading</h1>
+                                    <div className={`slider-card-container absolute w-full h-full aspect-video object-cover flex flex-row justify-start items-center overflow-hidden transition-opacity duration-[600ms] ${activeIndex===index?"opacity-100":"opacity-95"}`}>
+                                        <div className={`slider-icon z-50 absolute top-4 right-4 w-10 h-10  ${activeIndex===index?"flex flex-col justify-center items-center":"hidden"}  rounded-full bg-white/20 backdrop-blur-sm border border-white`}>
+                                           <ArrowUpRight className=" h-7 text-white"/> 
+                                        </div>
+                                        <img loading="lazy" src={data} className={`absolute w-full h-full  object-cover `}/>
+                                        <div className={`absolute bottom-0 w-full h-[35%] flex flex-col justify-end items-center px-4 py-8 md:py-2 lg:px-6  bg-gray-500/20 backdrop-blur-md border-t border-white/40 transition-opacity duration-[600ms] ${index === activeIndex?"opacity-100":"opacity-0"}`}>
+                                            <div className="w-full h-full flex flex-col justify-center items-center gap-3 py-8 px-36">
+                                                <div className="w-auto h-auto flex flex-row justify-center items-center gap-3">
+                                                    <Star width={32} height={32} className=" text-[#EEA10C] fill-[#EEA10C]"/>
+                                                    <Star width={32} height={32} className=" text-[#EEA10C] fill-[#EEA10C]"/>
+                                                    <Star width={32} height={32} className=" text-[#EEA10C] fill-[#EEA10C]"/>
+                                                    <Star width={32} height={32} className=" text-[#EEA10C] fill-[#EEA10C]"/>
+                                                    <Star width={32} height={32} className=" text-[#EEA10C] fill-[#EEA10C]"/>
+                                                </div>
+                                                <div className="w-full h-auto flex flex-col justify-center items-center gap-1">
+                                                    <h1 className="w-auto h-auto text-center text-white text-3xl/[30px] font-caliber font-semibold">Surya Vamsi</h1>
+                                                    <p className="w-auto h-auto text-center text-gray-200 text-xl/[20px] font-caliber font-medium">Frontend developer</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                    {/* <img loading="lazy" src={data} className={`absolute w-full h-full aspect-video object-cover transition-opacity duration-[600ms] ${activeIndex===index?"opacity-100":"opacity-65"}`}/>
+                                     */}
                                 </SwiperSlide>
                             );
                         })
