@@ -13,7 +13,7 @@ export default {
       fontFamily: {
         caliber: ['Caliber', 'sans-serif'],
         ZapfHumanist: ['ZapfHumanist', 'sans-serif'],
-        main: ["Splash", "cursive"],
+        main: ["Alex Brush", "cursive"],
         subhead: ["Lato", "mono"],
         shop: ["Monomaniac One", "sans-serif"],
         buttonf: ['"Jersey 25"', "sans-serif"],
