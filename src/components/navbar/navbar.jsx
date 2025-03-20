@@ -12,7 +12,6 @@ const NavBar=()=>{
                 <button className="w-auto h-auto font-caliber font-bold text-xl  flex items-center justify-center">Cart</button>
                 <button className="w-auto h-auto font-caliber font-bold text-xl  flex items-center justify-center">Login</button>
             </div>
-
         </div>        
     )
 }
