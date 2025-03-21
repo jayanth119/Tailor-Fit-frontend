@@ -24,10 +24,11 @@ export default {
       backgroundImage: {
         "radient-colour":"radial-gradient(circle, #92E0E4 0%, #63D7DB 50%, #0A999D 100%)",
         "circular-color": "radial-gradient(circle 360px at center bottom, #FAEDFC, #F4F4F6)",
-        "circular-slider" : "radial-gradient(circle at center bottom, #0B024D, #C2C1C5)"
+        "circular-slider" : "radial-gradient(circle at center bottom, #0B024D, #C2C1C5)",
+        "home-bg": "radial-gradient(at bottom right,#046E61 20%,#193D3C 60% 100%)"
       },
       colors: {
-        homebasic:"#183F3D",
+        homebasic:"#193C3B",
         button: "#6F276A",
         subhead: "#430A3F",
         navitem: "#80292A",

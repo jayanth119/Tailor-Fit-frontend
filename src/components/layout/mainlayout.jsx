@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../navbar/navbar";
 import { cn } from "../../utilities/cn";
+import Foooter from "../footers/footer";
 function MainLayout({children,className}){
 
     return(
@@ -9,6 +10,7 @@ function MainLayout({children,className}){
             <div className="w-full grow flex flex-col justify-center items-center">
                 {children}
             </div>
+            <Foooter/>
         </div>
     );
 

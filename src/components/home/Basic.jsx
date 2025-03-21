@@ -1,15 +1,9 @@
 const Basic=()=>{
     return(
-        <div className="w-full grow bg-homebasic h-screen flex">
-            <div className="p-5 flex flex-col justify-center ml-[10%] text-lg">
-                <p className="font-main text-5xl underline text-[#e6e6e6]">Tailor Fit
-                    </p>
-                <p className="text-md font-bold">
-                   <span className="text-[#b16c84]">Switching </span> 
-                    <span className="text-[#B8C480]">your </span> 
-                    <span className="text-[#8d9dd3]">Style </span> 
-                    <span className="text-[#e7b299]">Story</span>
-                </p>
+        <div className="w-full grow bg-home-bg h-screen flex">
+            <div className="p-5 flex flex-col justify-center ml-[10%] text-lg ">
+                <p className="font-main text-8xl text-[#e6e6e6] text-start">Tailor Fit</p>
+                <p className="font-caliber text-3xl text-white text-center">Switching your style stories</p>
             </div>
         </div>
     )
