@@ -6,7 +6,7 @@ const Suggestions = ({data})=>{
     return (
         <div className="w-full h-auto flex flex-col justify-start items-start gap-4 px-14 py-8">
             <div className="w-full h-auto flex flex-row justify-center items-center gap-4">
-                <h1 className="grow h-auto text-start font-ZapfHumanist font-medium text-5xl ">
+                <h1 className="grow h-auto text-start font-heading font-medium text-5xl ">
                     NEW ARRIVILES
                 </h1>
                 <div className="w-auto h-full px-2 flex flex-col justify-center items-center gap-1">

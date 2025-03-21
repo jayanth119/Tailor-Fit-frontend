@@ -8,6 +8,7 @@ import SetPasswordScreen from "../pages/authentication/setpassword";
 import OTPScreen from "../pages/authentication/otp";
 import SuccessScreenPass from "../pages/authentication/success-screen-password";
 import Home from "../pages/home";
+import Cart from "../pages/cart";
 import { PrivateRoute } from "../components/privateroutes";
 export const router = createBrowserRouter([
     {
@@ -53,7 +54,12 @@ export const router = createBrowserRouter([
                 element:<Home/>,
                 errorElement:<ErrorPage/>
             },
+            {
+                path:"/cart",
+                element:<Cart/>,
+                errorElement:<ErrorPage/>
+            },
         ],
     },
-    
+
 ])
