@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      scrollbarWidth: {
+        none: "none",
+      },
       backdropBlur: {
         xs: "2px",
         sm: "4px",
