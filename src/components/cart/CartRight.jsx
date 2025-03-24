@@ -12,6 +12,7 @@ const CartRight = () => {
           <div className="flex flex-row gap-56 text-lg font-subhead w-full">
             <div className="w-1/2 flex justify-start px-5 font-semibold">
               Original Price
+                 
             </div>
             <div className="w-1/2 flex justify-start">₹{pp}</div>
           </div>
